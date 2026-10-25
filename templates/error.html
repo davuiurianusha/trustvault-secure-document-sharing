@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}{{ code }}{% endblock %}
+{% block content %}<div class="error-page"><div class="error-code">{{ code }}</div><h2>We couldn't find that.</h2><p class="muted">{{ message }}</p><a class="btn primary" href="{{ url_for('dashboard') if current_user.is_authenticated else url_for('index') }}">Return to TrustVault</a></div>{% endblock %}
